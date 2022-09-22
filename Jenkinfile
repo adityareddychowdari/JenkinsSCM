@@ -1,0 +1,24 @@
+node {
+	stage('Gitclone') {
+	
+		git branch: 'main', credentialsId: '2ffd0121-8eab-4a99-adf6-8dcfacad0aa9', url: 'https://github.com/adityareddychowdari/jan2022.git'
+	}
+	stage('Maven version') {
+		powershell 'mvn -version'
+	}
+	stage('Java version') {
+		powershell 'java -version'
+	}
+	stage('Maven validate') {
+		powershell 'mvn -validate'
+	}
+	stage('Maven compile') {
+		powershell 'mvn compile'
+	}
+	stage('Maven Test') {
+		powershell 'mvn Test'
+	}
+	stage('Maven Package') {
+		powershell 'mvn Package'
+	}
+}
