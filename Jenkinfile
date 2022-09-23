@@ -1,4 +1,8 @@
 node {
+	tools {
+        maven 'apache-maven-3.6.3'
+        jdk 'jdk17.0.4.1'
+	}
 	stage('Gitclone') {
 	
 		git branch: 'main', credentialsId: '2ffd0121-8eab-4a99-adf6-8dcfacad0aa9', url: 'https://github.com/adityareddychowdari/jan2022.git'
