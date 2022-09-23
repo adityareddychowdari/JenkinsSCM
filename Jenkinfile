@@ -4,13 +4,13 @@ node {
 		git branch: 'main', credentialsId: '2ffd0121-8eab-4a99-adf6-8dcfacad0aa9', url: 'https://github.com/adityareddychowdari/jan2022.git'
 	}
 	stage('Maven version') {
-		sh 'maven -version'
+		sh 'maven --version'
 	}
 	stage('Java version') {
 		sh 'java -version'
 	}
 	stage('Maven validate') {
-		sh 'maven -validate'
+		sh 'maven validate'
 	}
 	stage('Maven compile') {
 		sh 'maven compile'
