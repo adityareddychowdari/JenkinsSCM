@@ -4,21 +4,21 @@ node {
 		git branch: 'main', credentialsId: '2ffd0121-8eab-4a99-adf6-8dcfacad0aa9', url: 'https://github.com/adityareddychowdari/jan2022.git'
 	}
 	stage('Maven version') {
-		powershell 'maven -version'
+		sh 'maven -version'
 	}
 	stage('Java version') {
-		powershell 'java -version'
+		sh 'java -version'
 	}
 	stage('Maven validate') {
-		powershell 'maven -validate'
+		sh 'maven -validate'
 	}
 	stage('Maven compile') {
-		powershell 'maven compile'
+		sh 'maven compile'
 	}
 	stage('Maven Test') {
-		powershell 'maven Test'
+		sh 'maven Test'
 	}
 	stage('Maven Package') {
-		powershell 'maven Package'
+		sh 'maven Package'
 	}
 }
