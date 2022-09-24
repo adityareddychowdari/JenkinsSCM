@@ -9,16 +9,16 @@ node {
 	stage('Java version') {
 		sh 'java -version'
 	}
-	stage('Maven validate') {
+	stage('Maven Validate') {
 		sh 'mvn validate'
 	}
 	stage('Maven compile') {
 		sh 'mvn compile'
 	}
 	stage('Maven Test') {
-		sh 'mvn Test'
+		sh 'mvn test'
 	}
 	stage('Maven Package') {
-		sh 'mvn Package'
+		sh 'mvn package'
 	}
 }
